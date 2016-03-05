@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NHSHackathon2016</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+
+<%= 'hello' %>
+
+<%= yield %>
+
+<%if current_user %>
+
+yes
+
+<% else %>
+
+<%#= link_to "Log In", new_user_session_path %>
+<%= render "devise/shared/links" %>
+<% end%>
+
+
+
+
+
+</body>
+</html>
